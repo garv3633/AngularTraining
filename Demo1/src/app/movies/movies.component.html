@@ -1,0 +1,14 @@
+<h1 class="bg-warning">Movie List :</h1>
+<div *ngFor="let movie of movies" class="card text-white bg-dark mb-3" style="width: 18rem; display: inline-block; margin: 2px;">
+    <div  class="card-body">
+        <h5 class="card-title">{{movie.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Genre: {{movie.genre.name}}</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h6 class="card-subtitle mb-2 text-muted">Rental Rate: {{movie.dailyRentalRate}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Stock: {{movie.numberInStock}}</h6>
+        <div>
+            <a (click)="onEdit(movie)" class="card-link btn btn-success btn-sm">Edit</a>
+            <a (click)="onDelete(movie._id)" class="card-link btn btn-danger btn-sm">Delete</a>
+        </div>
+    </div>
+  </div>

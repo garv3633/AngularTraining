@@ -1,0 +1,19 @@
+<div class="col-md-6">
+  <h1>Login Form:<br/><hr/></h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"
+                formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password"
+              formControlName="password">
+    </div>
+    <div *ngIf="loginError" class="alert alert-danger">{{loginError}}</div>
+    <div>
+      <button type="submit" class="btn btn-primary" style="float: right;">Login</button>
+    </div>
+  </form>
+</div>
